@@ -2759,7 +2759,60 @@
 		"explorerTxLink": "https://explorer.taichicoin.org/tx/{0}",
 		"explorerAccountLink": "https://explorer.taichicoin.org/address/{0}"
 	},
-	
+	"bitfishcoin": {
+		"name": "bitfishcoin",
+		"canonicalName": "bitfishcoin",
+		"symbol": "BTSC",
+		"family": "bitcoin",
+		"website": "https://bitfishcoin.org/",
+		"coinbaseHasher": {
+			"hash": "sha256d"
+		},
+		"headerHasher": {
+			"hash": "ghostrider"
+		},
+		"blockHasher": {
+			"hash": "reverse",
+			"args": [{
+				"hash": "sha256d"
+			}]
+		},
+		"hasFounderFee": true,
+		"hasMasterNodes": true,
+		"hasSmartNodes": true,
+		"foundersRewardAddress": ["BZVtBBsxuXxyHSroDfDr67PeXKc1MUCvFV"],
+		"shareMultiplier": 65536,
+		"explorerBlockLink": "https://explorer.bitfishcoin.org/block/$height$",
+		"explorerTxLink": "https://explorer.bitfishcoin.org/tx/{0}",
+		"explorerAccountLink": "https://explorer.bitfishcoin.org/address/{0}"
+	},
+	"litoreum": {
+		"name": "litoreum",
+		"canonicalName": "litoreum",
+		"symbol": "LTRM",
+		"family": "bitcoin",
+		"website": "https://litoreum.org/",
+		"coinbaseHasher": {
+			"hash": "sha256d"
+		},
+		"headerHasher": {
+			"hash": "ghostrider"
+		},
+		"blockHasher": {
+			"hash": "reverse",
+			"args": [{
+				"hash": "sha256d"
+			}]
+		},
+		"hasFounderFee": true,
+		"hasMasterNodes": true,
+		"hasSmartNodes": true,
+		"foundersRewardAddress": ["Le4Bf24bMRSzDaHFCWFrpk9Azri84miabi"],
+		"shareMultiplier": 65536,
+		"explorerBlockLink": "https://explorer.litoreum.org/block/$height$",
+		"explorerTxLink": "https://explorer.litoreum.org/tx/{0}",
+		"explorerAccountLink": "https://explorer.litoreum.org/address/{0}"
+	},
 	"fsociety": {
 		"name": "fsociety",
 		"canonicalName": "fsociety",
