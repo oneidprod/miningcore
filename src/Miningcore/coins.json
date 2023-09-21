@@ -2755,7 +2755,7 @@
 		"hasSmartNodes": true,
 		"foundersRewardAddress": ["Tk5musN3N6ipSMbJMfocf6UuZMEQ2UoscE"],
 		"shareMultiplier": 65536,
-		"explorerBlockLink": "https://explorer.taichicoin.org/block-height/$height$",
+		"explorerBlockLink": "https://explorer.taichicoin.org/block/$height$",
 		"explorerTxLink": "https://explorer.taichicoin.org/tx/{0}",
 		"explorerAccountLink": "https://explorer.taichicoin.org/address/{0}"
 	},
@@ -2914,9 +2914,9 @@
             "JQx6yy4rST5rD1joXWqBsZ6E3ZhFk6gWBk"
         ],
         "shareMultiplier": 65536,
-        "explorerBlockLink": "https://explorer.jagoancoin.org/block/$height$",
-        "explorerTxLink": "https://explorer.jagoancoin.org/tx/{0}",
-        "explorerAccountLink": "https://explorer.jagoancoin.org/address/{0}"
+        "explorerBlockLink": "https://explorer.jagoancoin.online/block/$height$",
+        "explorerTxLink": "https://https://explorer.jagoancoin.online//tx/{0}",
+        "explorerAccountLink": "https://https://explorer.jagoancoin.online//address/{0}"
     },
     "radiant": {
         "name": "Radiant",
