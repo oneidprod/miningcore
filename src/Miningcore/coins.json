@@ -2704,6 +2704,88 @@
         "explorerTxLink": "https://explorer.raptoreum.com/tx/{0}",
         "explorerAccountLink": "https://explorer.raptoreum.com/address/{0}"
     },
+    
+	"cointaft": {
+		"name": "cointaft",
+		"canonicalName": "cointaft",
+		"symbol": "TAFT",
+		"family": "bitcoin",
+		"website": "https://cointaft.com/",
+		"coinbaseHasher": {
+			"hash": "sha256d"
+		},
+		"headerHasher": {
+			"hash": "ghostrider"
+		},
+		"blockHasher": {
+			"hash": "reverse",
+			"args": [{
+				"hash": "sha256d"
+			}]
+		},
+		"hasFounderFee": true,
+		"hasMasterNodes": true,
+		"hasSmartNodes": true,
+		"foundersRewardAddress": ["TJYNwWF8rmHHSiFFC75w2sDPKxFPQ1xntg"],
+		"shareMultiplier": 65536,
+		"explorerBlockLink": "https://explorer.cointaft.com/block-height/$height$",
+		"explorerTxLink": "https://explorer.cointaft.com/tx/{0}",
+		"explorerAccountLink": "https://explorer.cointaft.com/address/{0}"
+	},
+	"taichicoin": {
+		"name": "taichicoin",
+		"canonicalName": "taichicoin",
+		"symbol": "TCC",
+		"family": "bitcoin",
+		"website": "https://taichicoin.org/",
+		"coinbaseHasher": {
+			"hash": "sha256d"
+		},
+		"headerHasher": {
+			"hash": "ghostrider"
+		},
+		"blockHasher": {
+			"hash": "reverse",
+			"args": [{
+				"hash": "sha256d"
+			}]
+		},
+		"hasFounderFee": true,
+		"hasMasterNodes": true,
+		"hasSmartNodes": true,
+		"foundersRewardAddress": ["Tk5musN3N6ipSMbJMfocf6UuZMEQ2UoscE"],
+		"shareMultiplier": 65536,
+		"explorerBlockLink": "https://explorer.taichicoin.org/block-height/$height$",
+		"explorerTxLink": "https://explorer.taichicoin.org/tx/{0}",
+		"explorerAccountLink": "https://explorer.taichicoin.org/address/{0}"
+	},
+	
+	"fsociety": {
+		"name": "fsociety",
+		"canonicalName": "fsociety",
+		"symbol": "FSC",
+		"family": "bitcoin",
+		"coinbaseHasher": {
+			"hash": "sha256d"
+		},
+		"headerHasher": {
+			"hash": "ghostrider"
+		},
+		"blockHasher": {
+			"hash": "reverse",
+			"args": [{
+				"hash": "sha256d"
+			}]
+		},
+		"hasFounderFee": true,
+		"hasMasterNodes": true,
+		"hasSmartNodes": true,
+		"foundersRewardAddress": ["FHE4yZreCVuRJWjiZTtBkREGpmEdjejhvb"],
+		"shareMultiplier": 65536,
+		"explorerBlockLink": "https://explorer.taichicoin.org/block-height/$height$",
+		"explorerTxLink": "https://explorer.taichicoin.org/tx/{0}",
+		"explorerAccountLink": "https://explorer.taichicoin.org/address/{0}"
+	},
 	"geckocoin": {
         "name": "Geckocoin",
         "canonicalName": "Geckocoin",
