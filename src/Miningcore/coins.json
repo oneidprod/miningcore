@@ -1982,6 +1982,35 @@
         "explorerTxLink": "https://explorer.mateable.com/tx/{0}",
         "explorerAccountLink": "https://explorer.mateable.com/address/{0}"
     },
+    "magpiecoin": {
+        "name": "MagPie Coin",
+        "symbol": "MGPC",
+        "family": "bitcoin",
+        "website": "http://magpiecoin.animalcoins.top",
+        "market": "",
+        "twitter": "",
+        "telegram": "",
+        "discord": "https://discord.gg/jBx52PNxdp",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "yespowermgpc"
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [
+                {
+                    "hash": "sha256d"
+                }
+            ]
+        },
+        "shareMultiplier": 65536,
+        "coinbaseMinConfimations": 341,
+        "explorerBlockLink": "http://mgpcexplorer.animalcoins.top:3030/block/$hash$",
+        "explorerTxLink": "http://mgpcexplorer.animalcoins.top:3030/tx/{0}",
+        "explorerAccountLink": "http://mgpcexplorer.animalcoins.top:3030/address/{0}"
+    },
     "maza": {
         "name": "Maza",
         "canonicalName": "Maza",

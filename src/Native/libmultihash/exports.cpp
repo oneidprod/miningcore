@@ -425,3 +425,8 @@ extern "C" MODULE_API void memehash_export(const char* input, char* output, uint
 {
     meme_hash(input, output, input_len);
 }
+
+extern "C" MODULE_API void yespowerMGPC_export(const char* input, char* output, uint32_t input_len)
+{
+    yespowerMGPC_hash(input, output, input_len);
+}
