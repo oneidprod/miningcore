@@ -791,7 +791,7 @@ public class BitcoinJob
         {
             masterNodeParameters = BlockTemplate.Extra.SafeExtensionDataAs<MasterNodeBlockTemplateExtra>();
 
-            if(coin.HasSmartNodes)
+            if((coin.Symbol == "RTM") || (coin.Symbol == "THOON") || (coin.Symbol == "YERB") || (coin.Symbol == "BTRM") || (coin.Symbol == "BBC") || (coin.Symbol == "GEC") || (coin.Symbol == "GSPC")|| (coin.Symbol == "JGC"))
             {
                 if(masterNodeParameters.Extra?.ContainsKey("smartnode") == true)
                 {
