@@ -2788,6 +2788,33 @@
 		"explorerTxLink": "https://explorer.taichicoin.org/tx/{0}",
 		"explorerAccountLink": "https://explorer.taichicoin.org/address/{0}"
 	},
+	"sccoin": {
+		"name": "sccoin",
+		"canonicalName": "sccoin",
+		"symbol": "SC",
+		"family": "bitcoin",
+		"website": "https://scchain.taichicoin.org/",
+		"coinbaseHasher": {
+			"hash": "sha256d"
+		},
+		"headerHasher": {
+			"hash": "ghostrider"
+		},
+		"blockHasher": {
+			"hash": "reverse",
+			"args": [{
+				"hash": "sha256d"
+			}]
+		},
+		"hasFounderFee": true,
+		"hasMasterNodes": true,
+		"hasSmartNodes": true,
+		"foundersRewardAddress": ["SZvk4D7KWdhW6ZEPKnnf6u7EPMQTvdN2KT"],
+		"shareMultiplier": 65536,
+		"explorerBlockLink": "https://scchain.taichicoin.org/block/$height$",
+		"explorerTxLink": "https://scchain.taichicoin.org/tx/{0}",
+		"explorerAccountLink": "https://scchain.taichicoin.org/address/{0}"
+	},
 	"bitfishcoin": {
 		"name": "bitfishcoin",
 		"canonicalName": "bitfishcoin",
