@@ -2891,9 +2891,10 @@
 		"hasSmartNodes": true,
 		"foundersRewardAddress": ["FHE4yZreCVuRJWjiZTtBkREGpmEdjejhvb"],
 		"shareMultiplier": 65536,
-		"explorerBlockLink": "https://explorer.taichicoin.org/block-height/$height$",
-		"explorerTxLink": "https://explorer.taichicoin.org/tx/{0}",
-		"explorerAccountLink": "https://explorer.taichicoin.org/address/{0}"
+        "explorerBlockLink": "https://explorer.fsocietychain.com/block/$height$",
+        "explorerTxLink": "https://explorer.fsocietychain.com/tx/{0}",
+        "explorerAccountLink": "https://explorer.fsocietychain.com/address/{0}"
+
 	},
 	"geckocoin": {
         "name": "Geckocoin",
