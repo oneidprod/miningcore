@@ -622,6 +622,37 @@
         "explorerTxLink": "https://blocks.butcoin.tech/tx/{0}",
         "explorerAccountLink": "https://blocks.butcoin.tech/address/{0}"
     },
+    "butkoin-gr": {
+        "name": "ButKoin Ghostrider",
+        "canonicalName": "ButKoin",
+        "symbol": "BUTK",
+        "family": "bitcoin",
+        "website": "https://butkoin.com/",
+        "twitter": "https://twitter.com/ButKoin",
+        "telegram": "#",
+        "discord": "https://discord.com/invite/j7T82mKkrw",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "ghostrider"
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [
+                {
+                    "hash": "sha256d"
+                }
+            ]
+        },
+        "hasFounderFee": true,
+        "hasMasterNodes": true,
+        "hasSmartNodes": true,
+        "shareMultiplier": 65536,
+        "explorerBlockLink": "https://explorer.butkoin.com//block/$height$",
+        "explorerTxLink": "https://explorer.butkoin.com//tx/{0}",
+        "explorerAccountLink": "https://explorer.butkoin.com//address/{0}"
+    },
     "cannabiscoin": {
         "name": "Cannabiscoin",
         "canonicalName": "Cannabiscoin",
