@@ -649,9 +649,9 @@
         "hasMasterNodes": true,
         "hasSmartNodes": true,
         "shareMultiplier": 65536,
-        "explorerBlockLink": "https://explorer.butkoin.com//block/$height$",
-        "explorerTxLink": "https://explorer.butkoin.com//tx/{0}",
-        "explorerAccountLink": "https://explorer.butkoin.com//address/{0}"
+        "explorerBlockLink": "https://explorer.butkoin.com/block/$height$",
+        "explorerTxLink": "https://explorer.butkoin.com/tx/{0}",
+        "explorerAccountLink": "https://explorer.butkoin.com/address/{0}"
     },
     "cannabiscoin": {
         "name": "Cannabiscoin",
