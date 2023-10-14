@@ -4374,6 +4374,36 @@
         "explorerTxLink": "https://explorer.yerbas.org/tx/{0}",
         "explorerAccountLink": "https://explorer.yerbas.org/address/{0}"
     },
+    "fuertecoin": {
+        "name": "Fuertecoin",
+        "canonicalName": "Fuertecoin",
+        "symbol": "FUEC",
+        "family": "bitcoin",
+        "website": "https://fuertecoin.network/",
+        "telegram": "#",
+        "discord": "https://discord.com/KxFRmwkmuM",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "ghostrider"
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [
+                {
+                    "hash": "sha256d"
+                }
+            ]
+        },
+        "hasFounderFee": true,
+        "hasMasterNodes": true,
+        "hasSmartNodes": true,
+        "shareMultiplier": 65536,
+        "explorerBlockLink": "http://explorer.fuertecoin.network:3001/block/$height$",
+        "explorerTxLink": "http://explorer.fuertecoin.network:3001/tx/{0}",
+        "explorerAccountLink": "http://explorer.fuertecoin.network:3001/address/{0}"
+    },
     "zetacoin": {
         "name": "Zetacoin",
         "canonicalName": "Zetacoin",
