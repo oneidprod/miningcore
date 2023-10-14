@@ -791,7 +791,7 @@ public class BitcoinJob
         {
             masterNodeParameters = BlockTemplate.Extra.SafeExtensionDataAs<MasterNodeBlockTemplateExtra>();
 
-            if((coin.Symbol == "RTM") || (coin.Symbol == "THOON") || (coin.Symbol == "YERB") || (coin.Symbol == "BTRM") || (coin.Symbol == "BBC") || (coin.Symbol == "GEC") || (coin.Symbol == "GSPC") || (coin.Symbol == "JGC") || (coin.Symbol == "BTSC") || (coin.Symbol == "LTRM") || (coin.Symbol == "TAFT") || (coin.Symbol == "TCC") || (coin.Symbol == "FSC") || (coin.Symbol == "SC") || (coin.Symbol == "BUTK") || (coin.Symbol == "ARGY") || (coin.Symbol == "MTBC"))
+            if((coin.Symbol == "RTM") || (coin.Symbol == "THOON") || (coin.Symbol == "YERB") || (coin.Symbol == "BTRM") || (coin.Symbol == "BBC") || (coin.Symbol == "GEC") || (coin.Symbol == "GSPC") || (coin.Symbol == "JGC") || (coin.Symbol == "BTSC") || (coin.Symbol == "LTRM") || (coin.Symbol == "TAFT") || (coin.Symbol == "TCC") || (coin.Symbol == "FSC") || (coin.Symbol == "SC") || (coin.Symbol == "BUTK") || (coin.Symbol == "ARGY") || (coin.Symbol == "MTBC") || (coin.Symbol == "FUEC"))
             {
                 if(masterNodeParameters.Extra?.ContainsKey("smartnode") == true)
                 {
