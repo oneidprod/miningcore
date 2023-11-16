@@ -4159,6 +4159,35 @@
         "explorerTxLink": "https://chainz.cryptoid.info/via/tx.dws?{0}.htm",
         "explorerAccountLink": "https://chainz.cryptoid.info/via/address.dws?{0}.htm"
     },
+"swamp": {
+		"name": "SwampCoin",
+		"symbol": "SWAMP",
+		"family": "bitcoin",
+		"website": "https://swampcoin.tech/",
+		"twitter": "https://twitter.com/SwampCoin",
+		"telegram": "",
+		"discord": "https://discord.com/invite/PxwMzE2",
+		"coinbaseHasher": {
+			"hash": "sha256d"
+		},
+		"headerHasher": {
+			"hash": "yespower"
+		},
+		"blockHasher": {
+			"hash": "reverse",
+			"args": [
+				{
+					"hash": "yespower"
+				}
+			]
+		},
+		"hasFounderReward": true,
+		"hasMasterNodes": true,
+		"shareMultiplier": 65536,
+		"explorerBlockLink": "https://swampcoin.tech/block/$hash$",
+		"explorerTxLink": "https://swampcoin.tech/tx/{0}",
+		"explorerAccountLink": "https://swampcoin.tech/address/{0}"
+    },
 	"volkshash": {
 		"name": "VolksHash",
 		"symbol": "VHH",
