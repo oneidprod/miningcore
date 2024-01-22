@@ -3781,11 +3781,11 @@
         "canonicalName": "Thooneum",
         "symbol": "THOON",
         "family": "bitcoin",
-        "website": "",
+        "website": "https://www.thooneum.xyz/",
         "market": "",
         "twitter": "",
         "telegram": "",
-        "discord": "",
+        "discord": "https://discord.com/invite/ze2YkYNTns",
         "coinbaseHasher": {
             "hash": "sha256d"
         },
@@ -3804,9 +3804,9 @@
         "hasMasterNodes": true,
         "hasSmartNodes": true,
         "shareMultiplier": 65536,
-        "explorerBlockLink": "http://rtm.timyg.org:6950/block/$height$",
-        "explorerTxLink": "http://rtm.timyg.org:6950/tx/{0}",
-        "explorerAccountLink": "http://rtm.timyg.org:6950/address/{0}"
+        "explorerBlockLink": "https://explorer.thooneum.xyz/block/$height$",
+        "explorerTxLink": "https://explorer.thooneum.xyz/tx/{0}",
+        "explorerAccountLink": "https://explorer.thooneum.xyz/address/{0}"
     },
     "titcoin": {
         "name": "Titcoin",
@@ -4159,7 +4159,36 @@
         "explorerTxLink": "https://chainz.cryptoid.info/via/tx.dws?{0}.htm",
         "explorerAccountLink": "https://chainz.cryptoid.info/via/address.dws?{0}.htm"
     },
-"swamp": {
+    "sprint": {
+                "name": "SprintPay",
+                "symbol": "SPRX",
+                "family": "bitcoin",
+                "website": "https://sprintpay.net/",
+                "twitter": "",
+                "telegram": "https://t.me/sprintpay",
+                "discord": "https://discord.gg/uaePNQz",
+                "coinbaseHasher": {
+                        "hash": "sha256d"
+                },
+                "headerHasher": {
+                        "hash": "yespower"
+                },
+                "blockHasher": {
+                        "hash": "reverse",
+                        "args": [
+                                {
+                                        "hash": "yespower"
+                                }
+                        ]
+                },
+                "hasFounderReward": true,
+                "hasMasterNodes": true,
+                "shareMultiplier": 65536,
+                "explorerBlockLink": "http://explorer.sprintpay.net/block/$hash$",
+                "explorerTxLink": "http://explorer.sprintpay.net/tx/{0}",
+                "explorerAccountLink": "http://explorer.sprintpay.net/address/{0}"
+    },
+    "swamp": {
 		"name": "SwampCoin",
 		"symbol": "SWAMP",
 		"family": "bitcoin",
@@ -4187,6 +4216,35 @@
 		"explorerBlockLink": "https://swampcoin.tech/block/$hash$",
 		"explorerTxLink": "https://swampcoin.tech/tx/{0}",
 		"explorerAccountLink": "https://swampcoin.tech/address/{0}"
+    },
+    "vish": {
+		"name": "VishAiCoin",
+		"symbol": "VISH",
+		"family": "bitcoin",
+		"website": "https://vishcoin.com/",
+		"twitter": "https://twitter.com/vishcoinai",
+		"telegram": "https://t.me/vishaiofficial",
+		"discord": "https://discord.com/invite/cxCfHuNpWn",
+		"coinbaseHasher": {
+			"hash": "sha256d"
+		},
+		"headerHasher": {
+			"hash": "yespower"
+		},
+		"blockHasher": {
+			"hash": "reverse",
+			"args": [
+				{
+					"hash": "yespower"
+				}
+			]
+		},
+		"hasFounderReward": true,
+		"hasMasterNodes": true,
+		"shareMultiplier": 65536,
+		"explorerBlockLink": "https://explorer.vishcoin.com/$hash$",
+		"explorerTxLink": "https://explorer.vishcoin.com/tx/{0}",
+		"explorerAccountLink": "https://explorer.vishcoin.com/{0}"
     },
 	"volkshash": {
 		"name": "VolksHash",
