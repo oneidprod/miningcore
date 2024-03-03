@@ -4491,6 +4491,36 @@
         "explorerTxLink": "http://explorer.fuertecoin.network:3001/tx/{0}",
         "explorerAccountLink": "http://explorer.fuertecoin.network:3001/address/{0}"
     },
+    "btcturquoise": {
+        "name": "BTCturquoise",
+        "canonicalName": "BTCturquoise",
+        "symbol": "BTCQ",
+        "family": "bitcoin",
+        "website": "https://btcturquoise.com/",
+        "telegram": "#",
+        "discord": "https://discord.com/invite/XgxtcdUZDu",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "ghostrider"
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [
+                {
+                    "hash": "sha256d"
+                }
+            ]
+        },
+        "hasFounderFee": true,
+        "hasMasterNodes": true,
+        "hasSmartNodes": true,
+        "shareMultiplier": 65536,
+        "explorerBlockLink": "https://explorer.btcturquoise.online/block/$height$",
+        "explorerTxLink": "https://explorer.btcturquoise.online/tx/{0}",
+        "explorerAccountLink": "https://explorer.btcturquoise.online/address/{0}"
+    },
     "zetacoin": {
         "name": "Zetacoin",
         "canonicalName": "Zetacoin",
