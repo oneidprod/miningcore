@@ -40,16 +40,17 @@ All GhostRider coins must have `"hasSmartNodes": true` in `miningcore_config/coi
 ## Backlog
 - Investigate `42703: column "minereffort" does not exist` ShareRecorder error fully (column exists in blocks; may be a view or different table path).
 - Investigate StatsRecorder timeout on `DeletePoolStatsBeforeAsync`/`DeleteMinerStatsBeforeAsync` — check table sizes and index coverage on `poolstats`/`minerstats`.
-- Commit pending changes: BitcoinJob.cs (HasSmartNodes fix), BlockRepository.cs (whitespace), build-only.sh, build-only-vps-amd.sh.
+- All GhostRider coins (including OSN, MENEL, DUN, and others added in remote commits) already have `hasSmartNodes: true` in miningcore_config — no action needed there.
 
 ## Session Log
 
-### Session 2 - 2026-06-03 - complete
+### Session 1 - 2026-06-03 - complete
 - Fixed `bad-cb-payee` GhostRider error: replaced hardcoded symbol list with `coin.HasSmartNodes` in BitcoinJob.cs line 794.
-- Added missing `hasSmartNodes`/`hasMasterNodes` flags to BBC, GSPC, JGC, MTBC in miningcore_config/coins.json. Committed and pushed config repo (eb7b3c6).
+- Added missing `hasSmartNodes`/`hasMasterNodes` flags to BBC, GSPC, JGC, MTBC and others in miningcore_config/coins.json. Committed and pushed config repo (eb7b3c6).
 - Created `build-only.sh` and `build-only-vps-amd.sh`.
 - Resolved AVX512 illegal instruction crash on VPS by patching native lib builds to use znver1.
 - Fixed PostgreSQL `max_locks_per_transaction` (512) and `max_connections` (200).
+- Rebased dev branch on remote (remote had 4 new commits adding more GR coins to hardcoded list; our HasSmartNodes fix supersedes them). Pushed both repos.
 - Pending: `minereffort` column error and StatsRecorder timeout not yet resolved.
 
-### Session 3 - next
+### Session 2 - next
