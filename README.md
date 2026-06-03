@@ -174,6 +174,37 @@ CREATE TABLE shares_mypool1 PARTITION OF shares FOR VALUES IN ('mypool1');
 
 Once you have done this for all of your existing pools you should now restore your shares from backup.
 
+### TimescaleDB (Required for this fork)
+
+This fork requires [TimescaleDB](https://docs.timescale.com/self-hosted/latest/install/) in addition to PostgreSQL. TimescaleDB is used for `blocks`, `poolstats`, and `minerstats` tables and enables instant GC via `drop_chunks` instead of row-by-row deletes.
+
+**Install TimescaleDB** (Ubuntu/Debian example for PostgreSQL 16):
+
+```console
+sudo apt install timescaledb-2-postgresql-16
+sudo timescaledb-tune --quiet --yes
+sudo systemctl restart postgresql
+```
+
+**Required postgresql.conf settings:**
+
+```
+shared_preload_libraries = 'timescaledb'
+max_locks_per_transaction = 512
+```
+
+The `max_locks_per_transaction = 512` setting is mandatory. TimescaleDB hypertables hold many chunk locks simultaneously and will deadlock or error with the default value of 64.
+
+**The `createdb.sql` script already includes the `create_hypertable` calls** -- no extra steps needed for a fresh install.
+
+**Upgrading from stock miningcore:** The `blocks` table requires a `minereffort` column that stock miningcore does not create. Add it before running:
+
+```console
+psql -h 127.0.0.1 -U miningcore -d miningcore -c "ALTER TABLE blocks ADD COLUMN minereffort FLOAT NULL;"
+```
+
+**Note:** The StatsRecorder GC uses `drop_chunks()` and will fail on plain PostgreSQL without TimescaleDB. Do not disable TimescaleDB after setup.
+
 ### Configuration
 
 Create a configuration file `config.json` as described [here](https://github.com/oliverw/miningcore/wiki/Configuration).

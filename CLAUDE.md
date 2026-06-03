@@ -38,8 +38,6 @@ All GhostRider coins must have `"hasSmartNodes": true` in `miningcore_config/coi
 - Both this repo and `miningcore_config` should be committed and pushed at end of each session.
 
 ## Backlog
-- Investigate `42703: column "minereffort" does not exist` ShareRecorder error fully (column exists in blocks; may be a view or different table path).
-- Investigate StatsRecorder timeout on `DeletePoolStatsBeforeAsync`/`DeleteMinerStatsBeforeAsync` — check table sizes and index coverage on `poolstats`/`minerstats`.
 - All GhostRider coins (including OSN, MENEL, DUN, and others added in remote commits) already have `hasSmartNodes: true` in miningcore_config — no action needed there.
 
 ## Session Log
@@ -53,4 +51,11 @@ All GhostRider coins must have `"hasSmartNodes": true` in `miningcore_config/coi
 - Rebased dev branch on remote (remote had 4 new commits adding more GR coins to hardcoded list; our HasSmartNodes fix supersedes them). Pushed both repos.
 - Pending: `minereffort` column error and StatsRecorder timeout not yet resolved.
 
-### Session 2 - next
+### Session 2 - 2026-06-03 - complete
+- Investigated `minereffort` error: column exists in all 155 TimescaleDB chunks including oldest. Error was historical (pre-ALTER TABLE). No code fix needed.
+- Investigated StatsRecorder timeout: poolstats 14.4M rows, minerstats 7.9M rows across hypertable chunks. Root cause confirmed: DELETE on large TimescaleDB table is slow.
+- Fixed StatsRepository.cs: replaced `DELETE WHERE created < @date` with `drop_chunks()` for both poolstats and minerstats. Instant chunk-file drop instead of row scan.
+- Updated createdb.sql: added `create_hypertable` calls for blocks, poolstats, minerstats.
+- Updated README.md: added TimescaleDB required section (install, postgresql.conf, minereffort upgrade note).
+
+### Session 3 - next

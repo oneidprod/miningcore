@@ -343,15 +343,17 @@ public class StatsRepository : IStatsRepository
 
     public Task<int> DeletePoolStatsBeforeAsync(IDbConnection con, DateTime date, CancellationToken ct)
     {
-        const string query = @"DELETE FROM poolstats WHERE created < @date";
+        // drop_chunks instantly removes entire TimescaleDB chunk files rather than row-by-row DELETE
+        const string query = @"SELECT count(*)::int FROM drop_chunks('poolstats', older_than => @date::timestamptz)";
 
-        return con.ExecuteAsync(new CommandDefinition(query, new { date }, cancellationToken: ct));
+        return con.ExecuteScalarAsync<int>(new CommandDefinition(query, new { date }, cancellationToken: ct));
     }
 
     public Task<int> DeleteMinerStatsBeforeAsync(IDbConnection con, DateTime date, CancellationToken ct)
     {
-        const string query = @"DELETE FROM minerstats WHERE created < @date";
+        // drop_chunks instantly removes entire TimescaleDB chunk files rather than row-by-row DELETE
+        const string query = @"SELECT count(*)::int FROM drop_chunks('minerstats', older_than => @date::timestamptz)";
 
-        return con.ExecuteAsync(new CommandDefinition(query, new { date }, cancellationToken: ct));
+        return con.ExecuteScalarAsync<int>(new CommandDefinition(query, new { date }, cancellationToken: ct));
     }
 }
